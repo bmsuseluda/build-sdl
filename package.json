@@ -20,6 +20,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "tar": "^7.1.0"
+    "tar": "^7.4.3"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }

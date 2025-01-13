@@ -2,7 +2,7 @@ import Fs from 'node:fs'
 import Path from 'node:path'
 import C from './util/common.js'
 import { fetch } from './util/fetch.js'
-import Tar from 'tar'
+import {create} from 'tar'
 
 const commonHeaders = {
 	"Accept": 'application/vnd.github+json',
@@ -50,7 +50,7 @@ await Fs.promises.mkdir(C.dir.publish, { recursive: true })
 const assetPath = Path.join(C.dir.publish, C.assetName)
 
 process.chdir(C.dir.dist)
-await Tar.create(
+await create(
 	{ gzip: true, file: assetPath },
 	await Fs.promises.readdir('.'),
 )
