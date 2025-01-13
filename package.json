@@ -1,10 +1,10 @@
 {
-  "version": "2.26.4-2",
-  "name": "@kmamal/build-sdl",
+  "version": "2.30.11-0",
+  "name": "@bmsuseluda/build-sdl",
   "description": "build-sdl",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:kmamal/build-sdl.git"
+    "url": "git+ssh://git@github.com:bmsuseluda/build-sdl.git"
   },
   "main": "index.js",
   "scripts": {
