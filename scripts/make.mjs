@@ -89,7 +89,7 @@ if (C.platform === 'win32') {
 
 // Strip binaries on linux
 if (C.platform === 'linux') {
-	const libDir = Path.join(C.dir.dist, 'lib')
+	const libDir = Path.join(C.dir.dist, 'lib64')
 	const libraries = await Fs.promises.readdir(libDir)
 	execSync(`strip -s ${Path.join(libDir, libraries[0])}`)
 }
