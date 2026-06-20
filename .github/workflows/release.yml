@@ -25,6 +25,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: libsdl-org/setup-sdl@main
+        id: sdl
+        with:
+          install-linux-dependencies: true
+          version: 3-latest
+          version-sdl-image: 3-latest
+
       - if: ${{ startsWith(matrix.platform.os, 'macos-') }}
         run: brew update && ./scripts/install-deps-mac.sh
 

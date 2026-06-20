@@ -26,5 +26,4 @@ apt-get install -y \
 	libibus-1.0-dev \
 	libudev-dev \
 	fcitx-libs-dev \
-	libpipewire-0.3-dev \
-	libsdl3-dev
+	libpipewire-0.3-dev

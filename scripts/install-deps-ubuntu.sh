@@ -27,5 +27,4 @@ apt-get install -y \
 	libudev-dev \
 	fcitx-libs-dev \
 	libpipewire-0.3-dev \
-	libdecor-0-dev \
-	libsdl3-dev
+	libdecor-0-dev
