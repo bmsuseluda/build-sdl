@@ -4,7 +4,7 @@ import C from './util/common.js'
 import { fetch } from './util/fetch.js'
 import * as Tar from 'tar'
 
-const url = `https://github.com/libsdl-org/SDL/archive/refs/tags/release-${C.version}.tar.gz`
+const url = `https://github.com/libsdl-org/sdl2-compat/releases/download/release-${C.version}/sdl2-compat-${C.version}.tar.gz`
 
 console.log("fetch", url)
 const response = await fetch(url)

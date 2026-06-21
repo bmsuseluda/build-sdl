@@ -13,17 +13,24 @@ jobs:
       fail-fast: false
       matrix:
         platform:
-          # - { name: 'Linux (x64)'     ,os: ubuntu-22.04              }
-          # - { name: 'Linux (arm64)'   ,os: ubuntu-22.04-arm          }
-          # - { name: 'Windows (x64)'   ,os: windows-2022              }
+          - { name: 'Linux (x64)'     ,os: ubuntu-26.04              }
+          - { name: 'Linux (arm64)'   ,os: ubuntu-26.04-arm          }
+          - { name: 'Windows (x64)'   ,os: windows-2025              }
           - { name: 'Windows (arm64)' ,os: windows-11-arm            }
-          # - { name: 'Mac (x64)'       ,os: macos-15     ,arch: x64   }
-          # - { name: 'Mac (arm64)'     ,os: macos-15     ,arch: arm64 }
+          - { name: 'Mac (x64)'       ,os: macos-26     ,arch: x64   }
+          - { name: 'Mac (arm64)'     ,os: macos-26     ,arch: arm64 }
 
     runs-on: ${{ matrix.platform.os }}
 
     steps:
       - uses: actions/checkout@v4
+
+      - uses: libsdl-org/setup-sdl@main
+        id: sdl
+        with:
+          install-linux-dependencies: true
+          version: 3-latest
+          version-sdl-image: 3-latest
 
       - if: ${{ startsWith(matrix.platform.os, 'macos-') }}
         run: brew update && ./scripts/install-deps-mac.sh
