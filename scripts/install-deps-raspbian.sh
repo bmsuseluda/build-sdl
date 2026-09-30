@@ -14,6 +14,7 @@ apt-get install -y \
 	libxcursor-dev \
 	libxfixes-dev \
 	libxi-dev \
+	libxtst-dev \
 	libxss-dev \
 	libwayland-dev \
 	libxkbcommon-dev \
